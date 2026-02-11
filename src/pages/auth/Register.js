@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { FiEye, FiEyeOff, FiMail, FiLock, FiUser, FiArrowRight } from 'react-icons/fi';
-import { registerUser, clearError } from '../../store/slices/authSlice';
+import { registerUser } from '../../store/slices/authSlice';
 import LoadingSpinner from '../../components/common/LoadingSpinner';
 
 const Register = () => {

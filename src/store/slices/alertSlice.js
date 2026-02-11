@@ -292,7 +292,7 @@ const alertSlice = createSlice({
       })
       .addCase(acknowledgeAlert.fulfilled, (state, action) => {
         state.isLoading = false;
-        const { alertId, responseTime } = action.payload;
+        const { alertId } = action.payload;
         
         const alertIndex = state.alerts.findIndex(alert => alert._id === alertId);
         if (alertIndex !== -1) {
@@ -317,7 +317,7 @@ const alertSlice = createSlice({
       })
       .addCase(escalateAlert.fulfilled, (state, action) => {
         state.isLoading = false;
-        const { alertId, nextContact } = action.payload;
+        const { alertId } = action.payload;
         
         const alertIndex = state.alerts.findIndex(alert => alert._id === alertId);
         if (alertIndex !== -1) {

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import { FiEye, FiEyeOff, FiMail, FiLock, FiArrowRight } from 'react-icons/fi';
-import { loginUser, clearError } from '../../store/slices/authSlice';
+import { loginUser } from '../../store/slices/authSlice';
 import LoadingSpinner from '../../components/common/LoadingSpinner';
 
 const Login = () => {

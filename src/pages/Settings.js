@@ -4,15 +4,10 @@ import {
   FiSettings, 
   FiBell, 
   FiShield, 
-  FiEye, 
   FiLock, 
   FiTrash2,
   FiDownload,
-  FiUpload,
-  FiMoon,
-  FiSun,
-  FiVolume2,
-  FiVolumeX
+  FiUpload
 } from 'react-icons/fi';
 
 const Settings = () => {

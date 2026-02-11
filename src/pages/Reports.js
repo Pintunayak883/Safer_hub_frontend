@@ -10,7 +10,6 @@ import {
   FiEye,
   FiThumbsUp,
   FiThumbsDown,
-  FiAlertTriangle,
   FiShield,
   FiHeart
 } from 'react-icons/fi';
