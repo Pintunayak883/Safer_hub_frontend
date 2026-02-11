@@ -140,23 +140,23 @@ export default function SafeRouteTool() {
   });
   const mapRef = React.useRef(null);
   const drawnRef = React.useRef({ polyline: null, startMarker: null, endMarker: null });
-  const heatmapLayerRef = React.useRef(null);
 
   // Draw native google.maps Polyline/Markers when selected route changes and Maps JS is loaded
   React.useEffect(() => {
     if (!isLoaded || typeof window === "undefined" || !window.google || !mapRef.current) return;
     // Clear previous
-    if (drawnRef.current.polyline) {
-      drawnRef.current.polyline.setMap(null);
-      drawnRef.current.polyline = null;
+    const currentDrawn = drawnRef.current;
+    if (currentDrawn.polyline) {
+      currentDrawn.polyline.setMap(null);
+      currentDrawn.polyline = null;
     }
-    if (drawnRef.current.startMarker) {
-      drawnRef.current.startMarker.setMap(null);
-      drawnRef.current.startMarker = null;
+    if (currentDrawn.startMarker) {
+      currentDrawn.startMarker.setMap(null);
+      currentDrawn.startMarker = null;
     }
-    if (drawnRef.current.endMarker) {
-      drawnRef.current.endMarker.setMap(null);
-      drawnRef.current.endMarker = null;
+    if (currentDrawn.endMarker) {
+      currentDrawn.endMarker.setMap(null);
+      currentDrawn.endMarker = null;
     }
 
     if (selected && selected.geometry && selected.geometry.length > 0) {
@@ -180,17 +180,17 @@ export default function SafeRouteTool() {
     }
 
     return () => {
-      if (drawnRef.current.polyline) {
-        drawnRef.current.polyline.setMap(null);
-        drawnRef.current.polyline = null;
+      if (currentDrawn.polyline) {
+        currentDrawn.polyline.setMap(null);
+        currentDrawn.polyline = null;
       }
-      if (drawnRef.current.startMarker) {
-        drawnRef.current.startMarker.setMap(null);
-        drawnRef.current.startMarker = null;
+      if (currentDrawn.startMarker) {
+        currentDrawn.startMarker.setMap(null);
+        currentDrawn.startMarker = null;
       }
-      if (drawnRef.current.endMarker) {
-        drawnRef.current.endMarker.setMap(null);
-        drawnRef.current.endMarker = null;
+      if (currentDrawn.endMarker) {
+        currentDrawn.endMarker.setMap(null);
+        currentDrawn.endMarker = null;
       }
     };
   }, [selected, isLoaded]);
@@ -212,7 +212,7 @@ export default function SafeRouteTool() {
         setHeatmapData(r.data.items || []);
       })
       .catch((err) => console.warn("Heatmap fetch failed", err));
-  }, [showHeatmap, mapRef.current]);
+  }, [showHeatmap]);
 
   async function handleFind(e) {
     e && e.preventDefault();
