@@ -8,7 +8,6 @@ import {
   FiBell, 
   FiHeart, 
   FiTrendingUp,
-  FiCheckCircle,
   FiArrowRight,
   FiStar
 } from 'react-icons/fi';

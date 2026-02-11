@@ -60,7 +60,7 @@ const useSocket = () => {
         setSocket(null);
       }
     }
-  }, [isAuthenticated, dispatch]);
+  }, [isAuthenticated, dispatch, socket]);
 
   return { socket };
 };

@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  FiUser, 
-  FiMail, 
-  FiPhone, 
   FiMapPin, 
   FiShield, 
   FiUsers, 

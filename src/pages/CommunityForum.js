@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  FiUsers, 
   FiMessageSquare, 
-  FiHeart, 
   FiThumbsUp, 
   FiSearch,
   FiFilter,
   FiPlus,
   FiTrendingUp,
-  FiClock,
   FiEye
 } from 'react-icons/fi';
 
